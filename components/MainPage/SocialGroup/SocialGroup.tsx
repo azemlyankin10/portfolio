@@ -1,4 +1,4 @@
-import { ListGroup } from "react-bootstrap";
+import { ListGroup } from 'react-bootstrap'
 import GitImg from '../../../utils/icons/git.svg'
 import TelegramImg from '../../../utils/icons/telegramm.svg'
 import WhatsAppImg from '../../../utils/icons/whatsapp.svg'
