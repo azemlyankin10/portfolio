@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Port+Lligat+Sans&display=swap');
+
+@import './utils/normalize.scss';
+@import './utils/variables.scss';
+@import './components/header.scss';
+@import './components/progects.scss';
+
+body {
+  background-color: black;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+#wave {
+  position: relative;
+  height: 70px;
+  width: 100%;
+  background: $green;
+  z-index: -1;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 56%;
+    width: 56.66%;
+    height: 80px;
+    background-color: #000;
+    left: -5px;
+    bottom: 40px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 50%;
+    height: 70px;
+    background-color: $green;
+    right: 0;
+    bottom: 27px;
+  }
+}
+
+.h-fluid {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 62px);
+  &__1 {
+    flex: 0 0 auto;
+  }
+
+  &__2 {
+    flex: 1 0 auto;
+  }
+
+  &__3 {
+    flex: 0 0 auto;
+  }
+}
+
+#nprogress .spinner {
+  display: none !important;
+}
