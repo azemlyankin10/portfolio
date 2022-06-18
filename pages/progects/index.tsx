@@ -12,7 +12,7 @@ export default function ProgectsPage({ data }: { data: [] }) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const res = await fetch(`${process.env.API_URL}/api/progects`)
     const data = await res.json()
