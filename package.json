@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "env API_URL=http://localhost:3000 next dev",
-    "build": "next build",
-    "start": "env API_URL=https://azemlyankin-portfolio-igpl1hn1j-azemlyankin10.vercel.app next start",
+    "build": "env API_URL=https://azemlyankin-portfolio-igpl1hn1j-azemlyankin10.vercel.app next build",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
