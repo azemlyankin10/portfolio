@@ -1,34 +1,34 @@
 import Head from 'next/head'
+import { useEffect, useState } from 'react'
 import { Layout } from '../../components/Layout/Layout'
+import { Loader } from '../../components/Loader/Loader'
 import { ProgectsPageComponent } from '../../components/ProgectsPage/ProgectsPage'
 
-export default function ProgectsPage({ data }: { data: [] }) {
-  if(!data) return null
+export default function ProgectsPage() {
+  const [loading, setLoading] = useState(false)
+  const [data, setData] = useState([])
+  const [error, setError] = useState('')
+  useEffect(() => {
+    setLoading(true)
+    fetch(`${process.env.API_URL}/api/progects`)
+      .then(res => res.json())
+      .then(data => setData(data))
+      .catch(e => { setError(e.toString()) })
+      .finally(() => { setLoading(false) })
+  }, [])
+  
+  
   return(
     <>
       <Head>
         <title>My portfolio</title>
       </Head>
       <Layout>
-        <ProgectsPageComponent
-          data={data}
-        />
+        {data && !loading && <ProgectsPageComponent data={data} />}
+        {loading && <Loader/>}
+        {error && <h1>{error}</h1>}
       </Layout>
     </>
   )
 }
 
-export async function getServerSideProps() {
-  try {
-    const res = await fetch(`${process.env.API_URL}/api/progects`)
-    const data = await res.json()
-    
-    return {
-      props: { data }
-    }
-  } catch {
-    return {
-      props: { data: null }
-    }
-  }
-}
