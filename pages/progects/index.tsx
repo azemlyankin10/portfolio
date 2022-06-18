@@ -14,7 +14,7 @@ const ProgectsPage = ({ data }: { data: [] }) => {
 export default ProgectsPage
 
 export async function getStaticProps() {
-  const res = await fetch('http://localhost:3000/api/progects')
+  const res = await fetch(`${process.env.API_URL}/api/progects`)
   const data = await res.json()
   
   return {
