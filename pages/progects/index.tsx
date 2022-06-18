@@ -1,14 +1,20 @@
+import Head from 'next/head'
 import { Layout } from '../../components/Layout/Layout'
 import { ProgectsPageComponent } from '../../components/ProgectsPage/ProgectsPage'
 
 export default function ProgectsPage({ data }: { data: [] }) {
   if(!data) return null
   return(
-    <Layout>
-      <ProgectsPageComponent
-        data={data}
-      />
-    </Layout>
+    <>
+      <Head>
+        <title>My portfolio</title>
+      </Head>
+      <Layout>
+        <ProgectsPageComponent
+          data={data}
+        />
+      </Layout>
+    </>
   )
 }
 

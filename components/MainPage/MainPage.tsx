@@ -13,7 +13,7 @@ export const MainPageComponent = ({ name, job, description, img }: IMe)  => (
   <div className='h-fluid'>
     <Container className='pt-lg-5 h-fluid__1'>
       <Row className='align-items-center pt-lg-5'>
-        <Col lg={5}>
+        <Col lg={5} className='text-center text-lg-start'>
           <Image src={img} alt='Image man' width='438px' height='368px'/>
         </Col>
 

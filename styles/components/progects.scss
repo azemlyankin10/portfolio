@@ -26,7 +26,12 @@
 
 div.cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  @media(max-width: 580px) {
+    // grid-template-columns: 1fr;
+    gap: 15px
+  }
 }
 
 .badgs {
@@ -40,21 +45,39 @@ div.cards {
 
 div.card {
   background: #fff;
-  margin: 8px;
+  // margin: 8px;
   display: block;
-  max-width: 300px;
+  max-width: 100%;
   perspective: 1000;
   position: relative;
   text-align: left;
   transition: all 0.3s 0s ease-in;
-  width: 300px;
+  width: 100%;
   z-index: 1;
 
   img {
-    max-width: 300px;
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100%;
   }
+
+  // @media(max-width: 768px) {
+  //   width: 100%;
+  //   max-width: 100%;
+  //   min-width: 0;
+  //   .card__image-holder span {
+  //     display: block !important;
+  //   }
+  //   img {
+  //     max-width: 100% !important;
+  //     width: 100% !important;
+  //   }
+  // }
   
   .card__image-holder {
+    & span {
+      display: block !important;
+    }
     background: rgba(0,0,0,0.1);
     height: 0;
     padding-bottom: 75%;

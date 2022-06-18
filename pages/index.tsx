@@ -1,43 +1,38 @@
 import { Layout } from '../components/Layout/Layout'
 import { IMe, MainPageComponent } from '../components/MainPage/MainPage'
 import parse from 'html-react-parser'
+import Head from 'next/head'
 
 export default function MainPage({ data }: {data: IMe}) {
   if(!data) return <>Not Found</>
     return (
-      <Layout>
+      <>
+        <Head>
+          <title>Introduction Page</title>
+        </Head>
+        <Layout>
           <MainPageComponent 
             name={data.name} 
             job={data.job} 
             description={parse(data.description) as string} 
             img={data.img}
           />
-      </Layout>
+        </Layout>
+      </>
     )
-
 }
 
-
-
 export async function getServerSideProps() {
-  console.log(process.env.API_URL)
-  
   try {
     const res = await fetch(`${process.env.API_URL}/api/me`)
     const data = await res.json()
     
     return {
-      props: {
-        data
-      }
+      props: { data }
     }
-  } catch(e) {
-    console.log(e)
-    
+  } catch {
       return {
-        props: {
-          data: null
-        }
+        props: { data: null }
       }
   }
 }

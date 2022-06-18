@@ -8,10 +8,10 @@ export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <RecoilRoot>
       <NextNProgress 
-        color="green"
+        color="#1e847e"
         startPosition={0.3}
         stopDelayMs={200}
-        height={3}
+        height={5}
         showOnShallow={true}
       />
       <Component {...pageProps} />

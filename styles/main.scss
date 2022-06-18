@@ -63,3 +63,40 @@ body {
 #nprogress .spinner {
   display: none !important;
 }
+
+.social-link {
+  & a:hover .changeColor {
+    fill: $green !important;
+  }
+}
+
+.bg-green {
+  background-color: $green !important;
+}
+
+///stack bg
+.js-bg-color {
+  background-color: #eed81a !important;
+}
+.css-bg-color {
+  background-color: RGB(32, 76, 228) !important;
+}
+.html-bg-color {
+  background-color: #e34f26 !important;
+}
+.scss-bg-color {
+  background-color: #c76493 !important;
+}
+.react-bg-color {
+  background-color: #61DBFB !important;
+}
+.php-bg-color {
+  background-color: #7377ae !important;
+}
+.recoil-bg-color {
+  background-color: #3578e5 !important;
+}
+.bootstrap-bg-color {
+  background-color: #7852b2 !important;
+}
+/// 
