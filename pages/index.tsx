@@ -1,12 +1,9 @@
 import { Layout } from '../components/Layout/Layout'
 import { IMe, MainPageComponent } from '../components/MainPage/MainPage'
 import parse from 'html-react-parser'
-import { useRecoilState } from 'recoil'
-import { isLoading } from '../Store/Atoms'
-import { useEffect } from 'react'
 
-const MainPage = ({ data }: {data: IMe}) => {
-
+export default function MainPage({ data }: {data: IMe}) {
+  if(!data) return null
   return (
     <Layout>
         <MainPageComponent 
@@ -18,16 +15,24 @@ const MainPage = ({ data }: {data: IMe}) => {
     </Layout>
   )
 }
-export default MainPage
+
 
 
 export async function getStaticProps() {
-  const res = await fetch(`${process.env.API_URL}/api/me`)
-  const data = await res.json()
-  
-  return {
-    props: {
-      data
+  try {
+    const res = await fetch(`${process.env.API_URL}/api/me`)
+    const data = await res.json()
+    
+    return {
+      props: {
+        data
+      }
+    }
+  } catch {
+    return {
+      props: {
+        data: null
+      }
     }
   }
 }

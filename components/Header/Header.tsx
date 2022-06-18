@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Navbar, Container, ListGroup, Button, Form, Nav, NavDropdown } from 'react-bootstrap'
+import { Navbar, Container, Nav } from 'react-bootstrap'
 import HomeIcon from '../../utils/icons/home.svg'
 
 export const Header = () => (

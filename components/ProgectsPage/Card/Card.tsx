@@ -2,7 +2,7 @@ import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { Badge } from 'react-bootstrap'
 import { useSetRecoilState } from 'recoil'
-import { isCardOpen } from '../../../Store/Atoms'
+import { isCardOpenState } from '../../../Store/Atoms'
 
 interface ICard {
   title: string
@@ -15,7 +15,7 @@ interface ICard {
 }
 
 export const Card = ({ title, subtitle, description, img, stackArr, webLink, codeLink }: ICard) => {
-  const setIsOpen = useSetRecoilState(isCardOpen)
+  const setIsOpen = useSetRecoilState(isCardOpenState)
   const [isShowCard, setIsShowCard] = useState(false)
 
   useEffect(() => {

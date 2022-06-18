@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap'
 import { useRecoilValue } from 'recoil'
-import { isCardOpen } from '../../Store/Atoms'
+import { isCardOpenState } from '../../Store/Atoms'
 import { Card } from './Card/Card'
 
 type typeProgect = {
@@ -16,7 +16,7 @@ type typeProgect = {
 }
 
 export const ProgectsPageComponent = ({ data }: { data: typeProgect[] }) => {
-  const isOpen = useRecoilValue(isCardOpen)
+  const isOpen = useRecoilValue(isCardOpenState)
 
   return (
     <Container>
