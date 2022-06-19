@@ -51,15 +51,11 @@ export const Header = () => {
                 </Link>
               </Nav.Item>
               <Nav.Item as='li' className='mb-1 mb-lg-0'>
-                <Link href='/skills'>
+                <Link href='/activity'>
                   <a 
-                    className={`text-decoration-none text-secondary fs-5 circle-effect ${pathname === '/skills' ? 'active' : ''}`}
-                    onClick={(e) => {  //delete
-                      e.preventDefault()
-                      window.alert('Developing...')
-                    }}
+                    className={`text-decoration-none text-light fs-5 circle-effect ${pathname === '/activity' ? 'active' : ''}`}
                   >
-                    Skills
+                    Activity
                   </a>
                 </Link>
               </Nav.Item>
