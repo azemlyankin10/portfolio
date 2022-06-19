@@ -24,7 +24,7 @@ export const Header = () => {
               <Nav.Item as='li' className='mb-1 mb-lg-0'>
                 <Link href='/education'>
                   <a 
-                    className={`text-decoration-none text-light fs-5 circle-effect ${pathname === '/education' ? 'active' : ''}`}
+                    className={`text-decoration-none text-secondary fs-5 circle-effect ${pathname === '/education' ? 'active' : ''}`}
                     onClick={(e) => {  //delete
                       e.preventDefault()
                       window.alert('Developing...')
@@ -53,7 +53,7 @@ export const Header = () => {
               <Nav.Item as='li' className='mb-1 mb-lg-0'>
                 <Link href='/skills'>
                   <a 
-                    className={`text-decoration-none text-light fs-5 circle-effect ${pathname === '/skills' ? 'active' : ''}`}
+                    className={`text-decoration-none text-secondary fs-5 circle-effect ${pathname === '/skills' ? 'active' : ''}`}
                     onClick={(e) => {  //delete
                       e.preventDefault()
                       window.alert('Developing...')
@@ -66,7 +66,7 @@ export const Header = () => {
               <Nav.Item as='li'>
                 <Link href='/contacts'>
                   <a 
-                    className={`text-decoration-none text-light fs-5 circle-effect ${pathname === '/contacts' ? 'active' : ''}`}
+                    className={`text-decoration-none text-secondary fs-5 circle-effect ${pathname === '/contacts' ? 'active' : ''}`}
                     onClick={(e) => {  //delete
                       e.preventDefault()
                       window.alert('Developing...')
