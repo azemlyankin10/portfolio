@@ -16,6 +16,7 @@ export default function MainPage({ data }: {data: IMe}) {
             job={data.job} 
             description={parse(data.description) as string} 
             img={data.img}
+            social={data.social}
           />
         </Layout>
       </>
