@@ -62,7 +62,7 @@ export const ProgectsPageComponent = ({ data }: { data: typeProgect[] }) => {
           </Form.Select>
         </Col>
       </Row>
-      <div className={`cards ${isOpen ? 'showing' : ''} py-5`}>
+      <div className={`cards ${isOpen ? 'showing' : ''} py-3`}>
         {progects.map((el, index) => (
           <Card key={index}
             title={el.name}

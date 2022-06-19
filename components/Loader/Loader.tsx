@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap'
 
 export const Loader = () => (
-  <Container className='d-flex justify-content-center mt-5 pt-5'>
+  <Container className='d-flex justify-content-center'>
     <div className="lds-facebook ms-4 mt-5 pt-5"><div></div><div></div><div></div></div>
     <style jsx>{`
       .lds-facebook {

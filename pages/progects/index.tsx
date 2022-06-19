@@ -25,7 +25,7 @@ export default function ProgectsPage() {
       </Head>
       <Layout>
         {data && !loading && <ProgectsPageComponent data={data} />}
-        {loading && <Loader/>}
+        {loading && <div className='mt-5 pt-5'><Loader/></div>}
         {error && <h1>{error}</h1>}
       </Layout>
     </>
