@@ -7,9 +7,10 @@ export interface IMe {
   job: string
   description: string
   img: string
+  social: { name: string, link: string }[]
 }
 
-export const MainPageComponent = ({ name, job, description, img }: IMe)  => (    
+export const MainPageComponent = ({ name, job, description, img, social }: IMe)  => (    
   <div className='h-fluid'>
     <Container className='pt-lg-5 h-fluid__1'>
       <Row className='align-items-center pt-lg-5'>
@@ -27,7 +28,7 @@ export const MainPageComponent = ({ name, job, description, img }: IMe)  => (
           <p className='me-lg-5 mb-4'>
             {description}
           </p>
-          <SocialGroup/>
+          <SocialGroup social={social} />
         </Col>
 
       </Row>
