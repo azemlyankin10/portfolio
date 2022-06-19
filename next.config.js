@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    API_URL: 'http://localhost:3000'
+    API_URL: process.env.NODE_ENV === 'development' ? 'http://localhost:3000' : 'https://azemlyankin-portfolio.vercel.app'
   }
 }
 
