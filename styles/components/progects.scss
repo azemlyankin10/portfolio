@@ -45,7 +45,6 @@ div.cards {
 
 div.card {
   background: #fff;
-  // margin: 8px;
   display: block;
   max-width: 100%;
   perspective: 1000;
@@ -54,25 +53,15 @@ div.card {
   transition: all 0.3s 0s ease-in;
   width: 100%;
   z-index: 1;
+  @media(min-width: 768px) {
+    max-width: 350px;
+  }
 
   img {
     max-width: 100% !important;
     width: 100% !important;
     height: 100%;
   }
-
-  // @media(max-width: 768px) {
-  //   width: 100%;
-  //   max-width: 100%;
-  //   min-width: 0;
-  //   .card__image-holder span {
-  //     display: block !important;
-  //   }
-  //   img {
-  //     max-width: 100% !important;
-  //     width: 100% !important;
-  //   }
-  // }
   
   .card__image-holder {
     & span {
@@ -153,6 +142,7 @@ div.card {
   }
   
   div.card-flap {
+    opacity: 0;
     background: #ffffff;
     position: absolute;
     width: 100%;
@@ -205,6 +195,7 @@ div.card.show {
   }
   div.card-flap {
     background: #ffffff;
+    opacity: 1;
     transform: rotateX(0deg);
   }
   div.flap1 {
